@@ -109,7 +109,9 @@ export default class Popover {
     this.popover.addEventListener('transitionend', () => this.options.onAfterShow.call(this), { once: true });
 
     // Reposition the menu after it appears in case a modifier kicked in
-    requestAnimationFrame(() => this.popper.update());
+    requestAnimationFrame(() => {
+      if (this.popper) this.popper.update()
+    });
   }
 
   hide() {
@@ -131,7 +133,9 @@ export default class Popover {
         strategy: this.options.strategy
       });
 
-      requestAnimationFrame(() => this.popper.update());
+      requestAnimationFrame(() => {
+        if (this.popper) this.popper.update()
+      });
     }
   }
 }
