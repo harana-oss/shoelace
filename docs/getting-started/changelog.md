@@ -6,6 +6,18 @@ Components with the <sl-badge type="warning" pill>Experimental</sl-badge> badge 
 
 _During the beta period, these restrictions may be relaxed in the event of a mission-critical bug._ 🐛
 
+## Next
+
+- 🚨 BREAKING CHANGE: Refactored `sl-select` to improve accessibility [#216](https://github.com/shoelace-style/shoelace/issues/216)
+  - Removed the internal `sl-input` because it was causing problems with a11y and virtual keyboards
+  - Removed `input`, `prefix` and `suffix` parts
+- 🚨 BREAKING CHANGE: Removed `copy-button` part from `sl-color-picker` since copying is now done by clicking the preview
+- Added `getFormattedValue()` method to `sl-color-picker` so you can retrieve the current value in any format
+- Fixed a bug where moving the mouse while `sl-dropdown` is closing would remove focus from the trigger
+- Fixed a bug where `sl-menu-item` didn't set a default color in the dark theme
+- Fixed a bug where `sl-color-picker` preview wouldn't update in Safari
+- Removed `sl-blur` and `sl-focus` events from `sl-menu` since menus can't have focus as of 2.0.0-beta.22
+
 ## 2.0.0-beta.24
 
 - Added `sl-format-date` component
