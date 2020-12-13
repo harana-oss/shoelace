@@ -110,7 +110,7 @@ export default class Popover {
 
     // Reposition the menu after it appears in case a modifier kicked in
     requestAnimationFrame(() => {
-      if (this.popper) this.popper.update()
+      if (this.popper) this.popper.update();
     });
   }
 
@@ -134,7 +134,7 @@ export default class Popover {
       });
 
       requestAnimationFrame(() => {
-        if (this.popper) this.popper.update()
+        if (this.popper) this.popper.update();
       });
     }
   }

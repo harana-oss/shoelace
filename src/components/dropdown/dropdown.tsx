@@ -142,7 +142,7 @@ export class Dropdown {
 
   disconnectedCallback() {
     this.hide();
-    this.popover.destroy();
+    if (this.popover) this.popover.destroy();
   }
 
   /** Shows the dropdown panel */
